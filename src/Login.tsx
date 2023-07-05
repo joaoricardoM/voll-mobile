@@ -24,7 +24,7 @@ export default function Login({ navigation }) {
         <Inputs label="Email" placeholder="Insira seu e-mail" />
         <Inputs label="Senha" placeholder="Insira seu senha" />
       </Box>
-      <Buttons>Entrar</Buttons>
+      <Buttons onPress={() => navigation.navigate("Tabs")}>Entrar</Buttons>
 
       <Link href="/" mt={2}>
         Esqueceu sua senha ?
