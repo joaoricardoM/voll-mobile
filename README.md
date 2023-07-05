@@ -1,5 +1,3 @@
-# voll-mobile
-An application for medical consultations using Native Base and TypeScript in React Native.(Under Development)
 
 # Voll #
 
