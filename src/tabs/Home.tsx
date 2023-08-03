@@ -34,8 +34,8 @@ export default function Main() {
           borderRightRadius="md"
           bgColor="gray.50"
         >
-          <Inputs label="" placeholder="Digite a especialidade" />
-          <Inputs label="" placeholder="Digite sua localização" />
+          <Inputs placeholder="Digite a especialidade" />
+          <Inputs placeholder="Digite sua localização" />
 
           <Buttons mt={3} mb={3}>
             Buscar

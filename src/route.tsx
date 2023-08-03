@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Login from "./Login";
 import Cadastro from "./Cadastro";
-import Tabs from "./tabs";
+import Tabs from "./Tabs";
 
 const Tab = createNativeStackNavigator();
 

@@ -1,12 +1,13 @@
 import { Text, VStack } from "native-base";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Home from "./Home";
-import Consultas from "./Consulta";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import Explorar from "./Explorar";
 import Perfil from "./Perfil";
+import Explorar from "./Explorar";
+import Consultas from "./Consulta";
+import Home from "./Home";
 
 const Tab = createBottomTabNavigator();
+
 const screenOptions = {
   tabBarStyle: { backgroundColor: "#002851" },
   tabBarActiveTintColor: "#339cff",
