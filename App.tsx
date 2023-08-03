@@ -7,13 +7,13 @@ import { useEffect } from 'react'
 import api from './src/services/api'
 
 export default function App() {
-  useEffect(() => {
-    async function getDate() {
-      const result = await api.get('/paciente')
-      console.log(result.data)
-    }
-    getDate()
-  }, [])
+  // useEffect(() => {
+  //   async function getDate() {
+  //     const result = await api.get('/paciente')
+  //     console.log(result.data)
+  //   }
+  //   getDate()
+  // }, [])
 
   return (
     <SSRProvider>
