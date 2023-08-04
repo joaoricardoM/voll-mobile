@@ -17,7 +17,6 @@ export default function Perfil({ navigation }: any) {
       const result = await getDataPatient(response)
       if (result) {
         setData(result)
-        console.log(result)
       }
     }
     dataPatient()

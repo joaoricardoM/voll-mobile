@@ -17,8 +17,6 @@ export default function Cadastro({ navigation }: any) {
     if (session < sections.length - 1) {
       setSession(session + 1)
     } else {
-      console.log(dados)
-      console.log(plano)
       register()
     }
   }
@@ -34,7 +32,6 @@ export default function Cadastro({ navigation }: any) {
   }
 
   async function register() {
-    console.log('oi')
     const result = await registerPatient({
       cpf: dados.cpf,
       nome: dados.nome,
@@ -59,10 +56,8 @@ export default function Cadastro({ navigation }: any) {
         description: 'Você já pode fazer login',
         bgColor: 'green.500'
       })
-      console.log('oi', result)
       navigation.replace('Login')
     } else {
-      console.log('erro')
       toast.show({
         title: 'Erro ao cadastrar',
         description: 'Verifique os dados e tente novamente',
