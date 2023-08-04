@@ -66,7 +66,7 @@ export default function Login({ navigation }) {
         <Inputs
           value={password}
           onChangeText={setPassWord}
-          securyTextEntry
+          secureTextEntry
           label="Senha"
           placeholder="Insira seu senha"
         />
