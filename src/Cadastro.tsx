@@ -7,13 +7,34 @@ import { useState } from 'react'
 import { sections } from './utils/json'
 import { registerPatient } from './services/registerPatient'
 
-export default function Cadastro({ navigation }) {
+export default function Cadastro({ navigation }: any) {
   const toast = useToast()
   const [session, setSession] = useState(0)
   const [dados, setDados] = useState({} as any)
   const [plano, setPlano] = useState([] as number[])
 
+  function nextSession() {
+    if (session < sections.length - 1) {
+      setSession(session + 1)
+    } else {
+      console.log(dados)
+      console.log(plano)
+      register()
+    }
+  }
+
+  function backSession() {
+    if (session > 0) {
+      setSession(session - 1)
+    }
+  }
+
+  function updateDados(id: string, valor: string) {
+    setDados({ ...dados, [id]: valor })
+  }
+
   async function register() {
+    console.log('oi')
     const result = await registerPatient({
       cpf: dados.cpf,
       nome: dados.nome,
@@ -38,34 +59,16 @@ export default function Cadastro({ navigation }) {
         description: 'Você já pode fazer login',
         bgColor: 'green.500'
       })
+      console.log('oi', result)
       navigation.replace('Login')
     } else {
+      console.log('erro')
       toast.show({
         title: 'Erro ao cadastrar',
         description: 'Verifique os dados e tente novamente',
         bgColor: 'red.500'
       })
     }
-  }
-
-  function nextSession() {
-    if (session < sections.length - 1) {
-      setSession(session + 1)
-    } else {
-      console.log(dados)
-      console.log(plano)
-      register()
-    }
-  }
-
-  function backSession() {
-    if (session > 0) {
-      setSession(session - 1)
-    }
-  }
-
-  function updateDados(id: string, valor: string) {
-    setDados({ ...dados, [id]: valor })
   }
 
   return (
@@ -80,9 +83,9 @@ export default function Cadastro({ navigation }) {
               label={text.label}
               placeholder={text.placeholder}
               key={text.id}
-              securyTextEntry={text.secureTextEntry}
+              secureTextEntry={text.secureTextEntry}
               value={dados[text.name]}
-              onChangeText={(e) => updateDados(text.name, e)}
+              onChangeText={(texts) => updateDados(text.name, texts)}
             />
           )
         })}

@@ -5,10 +5,10 @@ export async function registerPatient(paciente: Paciente) {
   if (!paciente) return null
   try {
     const result = await api.post('/paciente', paciente)
-    console.log(result)
+    console.log(result.data)
     return result.data
   } catch (error) {
-    console.log(error)
+    // console.log('oi', error)
     return null
   }
 }

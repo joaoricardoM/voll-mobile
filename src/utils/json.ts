@@ -12,32 +12,32 @@ const sections = [
       {
         id: 2,
         label: 'Email',
-        placeholder: 'Digite seu E-mail',
+        placeholder: 'Digite seu email',
         name: 'email'
       },
       {
         id: 3,
         label: 'Crie uma senha',
-        placeholder: 'Digite sua senha',
+        placeholder: 'Insira sua senha',
         secureTextEntry: true,
         name: 'senha'
       },
       {
         id: 4,
-        label: 'Confirme sua nova senha',
-        placeholder: 'Digite sua senha',
+        label: 'Confirme sua senha',
+        placeholder: 'Insira sua senha',
         secureTextEntry: true,
         name: 'confirmaSenha'
       },
       {
         id: 5,
-        label: 'Insira o CPF',
-        placeholder: 'Insira o CPF',
+        label: 'CPF',
+        placeholder: 'Insira seu CPF',
         name: 'cpf'
       },
       {
         id: 6,
-        label: 'Foto de Pefil',
+        label: 'Foto de perfil',
         placeholder: 'Link da foto',
         name: 'imagem'
       }
@@ -46,12 +46,12 @@ const sections = [
   },
   {
     id: 2,
-    title: 'Agora, mais alguns dados sobre você',
+    title: 'Agora, mais alguns dados sobre você:',
     text: [
       {
         id: 1,
         label: 'CEP',
-        placeholder: 'Digite seu nome CEP',
+        placeholder: 'Insira seu CEP',
         name: 'cep'
       },
       {
@@ -63,13 +63,13 @@ const sections = [
       {
         id: 3,
         label: 'Número',
-        placeholder: 'Insira o Número',
+        placeholder: 'Insira seu número',
         name: 'numero'
       },
       {
         id: 4,
         label: 'Complemento',
-        placeholder: 'Digite seu complemento',
+        placeholder: 'Insira seu complemento',
         name: 'complemento'
       },
       {
@@ -81,7 +81,7 @@ const sections = [
       {
         id: 6,
         label: 'Estado',
-        placeholder: 'Informe seu estado',
+        placeholder: 'Seu Estado',
         name: 'estado'
       }
     ],
@@ -89,7 +89,7 @@ const sections = [
   },
   {
     id: 3,
-    title: 'Para finalizar quais são os seus planos?',
+    title: 'Para finalizar, quais são os seus planos?',
     text: [],
     checkbox: [
       {
@@ -119,10 +119,6 @@ const sections = [
       {
         id: 7,
         value: 'Outros'
-      },
-      {
-        id: 8,
-        value: 'Não tenho plano'
       }
     ]
   }

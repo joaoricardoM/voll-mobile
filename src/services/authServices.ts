@@ -1,7 +1,7 @@
 import api from './api'
 
 export async function authLogin(email: string, senha: string) {
-  //   if (!email || !password) return null
+  if (!email || !senha) return null
   try {
     const result = await api.post('/auth/login', { email, senha })
     console.log(result)

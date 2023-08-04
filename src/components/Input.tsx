@@ -1,20 +1,20 @@
-import { FormControl, Input } from "native-base";
-import { ReactNode } from "react";
+import { FormControl, Input } from 'native-base'
+import { ReactNode } from 'react'
 
 interface InputsProps {
-  label?: ReactNode;
-  placeholder: string;
-  securyTextEntry?: boolean;
-  value?: string;
-  onChangeText?: (text: string) => void;
+  label?: ReactNode
+  placeholder: string
+  secureTextEntry?: boolean
+  value?: string
+  onChangeText?: (text: string) => void
 }
 
 export function Inputs({
   label,
   placeholder,
-  securyTextEntry = false,
+  secureTextEntry = false,
   value,
-  onChangeText,
+  onChangeText
 }: InputsProps): JSX.Element {
   return (
     <FormControl mt={3}>
@@ -26,10 +26,10 @@ export function Inputs({
         bgColor="gray.100"
         shadow={3}
         placeholder={placeholder}
-        secureTextEntry={securyTextEntry}
+        secureTextEntry={secureTextEntry}
         value={value}
         onChangeText={onChangeText}
       />
     </FormControl>
-  );
+  )
 }
