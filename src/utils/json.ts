@@ -1,97 +1,127 @@
-const sessions = [
+const sections = [
   {
     id: 1,
-    title: "Insira alguns dados básicos",
+    title: 'Insira alguns dados básicos',
     text: [
       {
         id: 1,
-        label: "Nome",
-        placeholder: "Digite seu nome completo",
+        label: 'Nome',
+        placeholder: 'Digite seu nome completo',
+        name: 'nome'
       },
       {
         id: 2,
-        label: "Email",
-        placeholder: "Digite seu E-mail",
+        label: 'Email',
+        placeholder: 'Digite seu email',
+        name: 'email'
       },
       {
         id: 3,
-        label: "Crie uma senha",
-        placeholder: "Digite sua senha",
+        label: 'Crie uma senha',
+        placeholder: 'Insira sua senha',
+        secureTextEntry: true,
+        name: 'senha'
       },
       {
         id: 4,
-        label: "Confirme sua nova senha",
-        placeholder: "Digite sua senha",
+        label: 'Confirme sua senha',
+        placeholder: 'Insira sua senha',
+        secureTextEntry: true,
+        name: 'confirmaSenha'
       },
+      {
+        id: 5,
+        label: 'CPF',
+        placeholder: 'Insira seu CPF',
+        name: 'cpf'
+      },
+      {
+        id: 6,
+        label: 'Foto de perfil',
+        placeholder: 'Link da foto',
+        name: 'imagem'
+      }
     ],
-    checkbox: [],
+    checkbox: []
   },
   {
     id: 2,
-    title: "Agora, mais alguns dados sobre você",
+    title: 'Agora, mais alguns dados sobre você:',
     text: [
       {
         id: 1,
-        label: "CEP",
-        placeholder: "Digite seu nome CEP",
+        label: 'CEP',
+        placeholder: 'Insira seu CEP',
+        name: 'cep'
       },
       {
         id: 2,
-        label: "Endereço",
-        placeholder: "Digite seu endereço",
+        label: 'Rua',
+        placeholder: 'Nome da rua',
+        name: 'rua'
       },
       {
         id: 3,
-        label: "Número",
-        placeholder: "Insira o Número",
+        label: 'Número',
+        placeholder: 'Insira seu número',
+        name: 'numero'
       },
       {
         id: 4,
-        label: "Complemento",
-        placeholder: "Digite seu complemento",
+        label: 'Complemento',
+        placeholder: 'Insira seu complemento',
+        name: 'complemento'
       },
+      {
+        id: 5,
+        label: 'Telefone',
+        placeholder: '(00) 00000-0000',
+        name: 'telefone'
+      },
+      {
+        id: 6,
+        label: 'Estado',
+        placeholder: 'Seu Estado',
+        name: 'estado'
+      }
     ],
-    checkbox: [],
+    checkbox: []
   },
   {
     id: 3,
-    title: "Para finalizar quais são os seus planos?",
+    title: 'Para finalizar, quais são os seus planos?',
     text: [],
     checkbox: [
       {
         id: 1,
-        value: "Sulamerica",
+        value: 'Sulamerica'
       },
       {
         id: 2,
-        value: "Unimed",
+        value: 'Unimed'
       },
       {
         id: 3,
-        value: "Bradesco",
+        value: 'Bradesco'
       },
       {
         id: 4,
-        value: "Amil",
+        value: 'Amil'
       },
       {
         id: 5,
-        value: "Biosaúde",
+        value: 'Biosaúde'
       },
       {
         id: 6,
-        value: "Biovida",
+        value: 'Biovida'
       },
       {
         id: 7,
-        value: "Outros",
-      },
-      {
-        id: 8,
-        value: "Não tenho plano",
-      },
-    ],
-  },
-];
+        value: 'Outros'
+      }
+    ]
+  }
+]
 
-export { sessions };
+export { sections }
