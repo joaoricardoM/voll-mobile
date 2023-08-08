@@ -6,8 +6,9 @@ import { Buttons } from './components/Button'
 import { useState } from 'react'
 import { sections } from './utils/json'
 import { registerPatient } from './services/registerPatient'
+import { NavigationProps } from './@types/navigation'
 
-export default function Cadastro({ navigation }: any) {
+export default function Cadastro({ navigation }: NavigationProps<'Cadastro'>) {
   const toast = useToast()
   const [session, setSession] = useState(0)
   const [dados, setDados] = useState({} as any)

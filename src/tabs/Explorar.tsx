@@ -5,14 +5,16 @@ import { Card } from '../components/Card'
 import { Inputs } from '../components/Input'
 import { useState } from 'react'
 import { getSpecialist } from '../services/specialistService'
+import { NavigationProps } from '../@types/navigation'
 
 interface Specialist {
   nome: string
   imagem: string
   especialidade: string
+  id: string
 }
 
-export default function Explorar() {
+export default function Explorar({ navigation }: NavigationProps<'Explorar'>) {
   const [state, setState] = useState('')
   const [speciality, setSpeciality] = useState('')
   const [search, setSearch] = useState([])
@@ -68,6 +70,11 @@ export default function Explorar() {
             name={specilist.nome}
             especiality={specilist.especialidade}
             foto={specilist.imagem}
+            onPress={() =>
+              navigation.navigate('Agendamento', {
+                especialistaId: specilist.id
+              })
+            }
           />
         </VStack>
       ))}

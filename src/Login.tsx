@@ -9,8 +9,9 @@ import { authLogin } from './services/authServices'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import jwtDecode from 'jwt-decode'
 import { useEffect } from 'react'
+import { NavigationProps } from './@types/navigation'
 
-export default function Login({ navigation }) {
+export default function Login({ navigation }: NavigationProps<'Login'>) {
   const [email, setEmail] = useState('')
   const [password, setPassWord] = useState('')
   const [loading, setLoading] = useState(true)
@@ -27,6 +28,11 @@ export default function Login({ navigation }) {
     verifyLogin()
   }, [])
 
+  interface TokenProps {
+    token: string
+    id: string
+  }
+
   async function login() {
     const result = await authLogin(email, password)
 
@@ -34,7 +40,7 @@ export default function Login({ navigation }) {
       const { token } = result
       AsyncStorage.setItem('token', token)
 
-      const tokenDecode = jwtDecode(token) as any
+      const tokenDecode = jwtDecode(token) as TokenProps
       const patientId = tokenDecode.id
 
       AsyncStorage.setItem('PatientId', patientId)

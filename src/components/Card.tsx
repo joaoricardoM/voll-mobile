@@ -1,13 +1,14 @@
-import { Avatar, Text, VStack } from "native-base";
-import { Buttons } from "./Button";
+import { Avatar, Text, VStack } from 'native-base'
+import { Buttons } from './Button'
 
 interface CardProps {
-  name: string;
-  foto: string;
-  especiality: string;
-  date?: string;
-  answered?: boolean;
-  scheduled?: boolean;
+  name: string
+  foto: string
+  especiality: string
+  date?: string
+  answered?: boolean
+  scheduled?: boolean
+  onPress?: () => void
 }
 
 export function Card({
@@ -17,11 +18,12 @@ export function Card({
   especiality,
   answered,
   scheduled,
+  onPress
 }: CardProps) {
   return (
     <VStack
       w="100%"
-      bg={answered ? "blue.100" : "white"}
+      bg={answered ? 'blue.100' : 'white'}
       p="5"
       borderRadius="lg"
       shadow="2"
@@ -37,7 +39,9 @@ export function Card({
           <Text>{date}</Text>
         </VStack>
       </VStack>
-      <Buttons mt={4}>{scheduled ? "cancelar" : "Agendar Consulta"}</Buttons>
+      <Buttons mt={4} onPress={onPress}>
+        {scheduled ? 'cancelar' : 'Agendar Consulta'}
+      </Buttons>
     </VStack>
-  );
+  )
 }
